@@ -1,0 +1,28 @@
+tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+
+#example_wrapper> .row> .col-sm-6:first-child{
+	display: none;
+}
+
+.collection-header{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.article-edit{
+	margin: 10px;
+}
+
+/*.nav-wrapper{
+	margin-top:20px;
+}*/
+
+html, body { height: 100%; margin: 0; padding: 0; }
+  #map { height: 100%; }
+
+  
