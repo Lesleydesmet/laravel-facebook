@@ -45,20 +45,6 @@ class LoginController extends Controller
     	 // return $this->login($request);
     }
 
-    public function imageUpload(Request $request)
-    {
-    	$files = $request->file('image');
-    	dd($files);
-
-    	if($files)
-    	{
-    		foreach($files as $file){
-    			Storage::put($file->getClientOriginalName(), file_get_contents($file));
-    		}
-    	}
-    	
-    }
-
     public function redirectToProvider()
      {
          return Socialite::driver('facebook')->redirect();

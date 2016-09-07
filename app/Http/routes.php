@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -62,16 +63,13 @@ Route::post('/log',[
 	'uses'=>'user\LoginController@postLogin',
 	'as'=>'user'
 	]);
-Route::get('/image',function(){
-	return view('form.image');
-});
-Route::post('/imageUpload',[
-		'uses'=>'user\LoginController@imageUpload',
-		'as'=>'upload'
-	]);
 
 
 //image
 Route::get('upload','ApplyController@image');
 //Route::post('apply/upload', 'ApplyController@upload');
 Route::post('apply/upload', 'ApplyController@multiple_upload');
+
+
+//email
+Route::get('/email','ApplyController@emailSend');

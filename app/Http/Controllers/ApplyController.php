@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
 use Validator;
 use Redirect;
 use Session;
@@ -90,4 +91,28 @@ class ApplyController extends Controller
 		      return Redirect::to('upload')->withInput()->withErrors($validator);
 		    }
 	    }
+
+
+	    //sending email
+
+    public function emailSend()
+    {
+//        $user = User::find(1)->toArray();
+//        Mail::send('emails.mailEvent', $user, function($message) use ($user) {
+//            $message->to($user->email);
+//            $message->subject('Mailgun Testing');
+//        });
+
+//        Mail::send('email.email',['name'=>'kapil'], function($message)
+//        {
+//            $message->to('devilhunter1200@gmail.com');
+//            $message->subject('Testing Email');
+//        });
+        Mail::raw('Text to e-mail', function ($message) {
+            $message->from('kparajuli94@gmail.com', 'Laravel');
+
+            $message->to('devilhunter1200@gmail.com');
+        });
+        dd('Mail Send Successfully');
+    }
 }
