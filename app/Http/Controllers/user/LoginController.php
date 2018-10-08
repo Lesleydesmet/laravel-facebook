@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 
@@ -10,14 +10,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
-use App\Repository\user\UserRepistory;
+use App\Repository\User\UserRepository;
 use App\User;
 
 
 class LoginController extends Controller
 {
 
-    public function __construct(UserRepistory $user)
+    public function __construct(UserRepository $user)
     {
 
     }

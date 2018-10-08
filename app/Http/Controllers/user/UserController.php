@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 
@@ -14,7 +14,6 @@ class UserController extends Controller
     	  $this->middleware('auth');
     }
 
-    //index
     public function index()
     {
     	return view('user.index');
